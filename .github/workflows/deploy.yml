@@ -1,0 +1,9 @@
+name: Deploy
+on:
+  push:
+    branches: [main]
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "deploy de teste do módulo Deploys do B2Lab"; sleep 20
