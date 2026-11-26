@@ -1,0 +1,17 @@
+name: Loja (ensaio)
+# Ensaio do envio de loja do B2Lab Deploys: recebe os inputs como os workflows de loja dos apps e não publica nada.
+on:
+  workflow_dispatch:
+    inputs:
+      plataforma:
+        type: choice
+        options: [ios, android]
+        default: ios
+      publish:
+        type: boolean
+        default: false
+jobs:
+  loja:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "ensaio de loja plataforma=${{ inputs.plataforma }} publish=${{ inputs.publish }}"; sleep 40
